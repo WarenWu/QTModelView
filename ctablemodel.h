@@ -1,0 +1,53 @@
+#ifndef CTABLEMODEL_H
+#define CTABLEMODEL_H
+#include <QAbstractTableModel>
+//#include <QMetaType>
+//Q_DECLARE_METATYPE(std::string)
+class CTableModel:public QAbstractTableModel
+{
+private:
+    struct CPlatform {
+        int id;
+        QString name;
+    };
+    struct CStation {
+        int id;
+        QString name;
+    };
+    struct CTask {
+        int id;
+        QString name;
+    };
+
+public:
+    CTableModel();
+    int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const;
+    //QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const;
+    //Qt::ItemFlags flags(const QModelIndex &index) const;
+    //bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole);
+    //bool setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role = Qt::EditRole);
+    //bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex());
+    //bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
+
+private:
+    void setRowCount();
+    void setColumCount();
+
+private:
+    QVariant getPlatformData(int row)const;
+    QVariant getStationData(int row)const;
+    QVariant getTaskData(int row)const;
+
+private:
+    int m_rowcount;
+    int m_columcount;
+
+    std::vector<CPlatform> m_colPlatform;
+    std::vector<CStation> m_colStation;
+    std::vector<CTask> m_colTask;
+
+};
+
+#endif // CTABLEMODEL_H
