@@ -6,16 +6,16 @@
 class CTableModel:public QAbstractTableModel
 {
 private:
-    struct CPlatform {
+    struct CPlatformInfo {
+        int nIndex;
+        QString name;
+    };
+    struct CStationInfo {
         int id;
         QString name;
     };
-    struct CStation {
-        int id;
-        QString name;
-    };
-    struct CTask {
-        int id;
+    struct CTaskInfo {
+        int cu;
         QString name;
     };
 

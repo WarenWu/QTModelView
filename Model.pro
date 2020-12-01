@@ -16,14 +16,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    ctabledelegate.cpp \
-    ctablemodel.cpp \
+    cplatforminfo.cpp \
+    cplatinfodelegate.cpp \
+    cplatinfomodel.cpp \
+    iplatinfo.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
-    ctabledelegate.h \
-    ctablemodel.h \
+    cplatforminfo.h \
+    cplatinfodelegate.h \
+    cplatinfomodel.h \
+    iplatinfo.h \
     mainwindow.h
 
 FORMS += \

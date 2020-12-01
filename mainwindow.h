@@ -1,7 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "ctablemodel.h"
+#include "cplatinfomodel.h"
 
 #include <QMainWindow>
 
