@@ -1,4 +1,4 @@
-#include "ctabledelegate.h"
+#include "cplatinfodelegate.h"
 
 CTableDelegate::CTableDelegate()
 {

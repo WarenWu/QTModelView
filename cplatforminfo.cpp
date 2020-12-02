@@ -13,11 +13,23 @@ void CPlatformInfo::Init()
 
 QString CPlatformInfo::CurrentName() const
 {
-    if (m_currentID != -1){
-        return  s_mapInfo[m_currentID];
-    }
-    return "";
+     return  "车站1";
 }
+
+QString CPlatformInfo::CurrentID() const
+{
+    if(m_currentID < 0)
+    {
+        return "";
+    }
+    return QString::number(m_currentID);
+}
+
+//CPlatformInfo::~CPlatformInfo()
+//{
+//}
+
+QMap<int,QString> CPlatformInfo::s_mapInfo;
 
 void CPlatformInfo::updateInfo()
 {

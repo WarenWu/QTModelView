@@ -11,10 +11,13 @@ public:
     CPlatformInfo();
     void Init() override;
     QString CurrentName() const override;
+    QString CurrentID() const override;
+    //virtual ~CPlatformInfo();
 private:
     static void updateInfo();
 private:
     int m_currentID;
+    QString m_currentName;
     static QMap<int,QString> s_mapInfo;
 };
 Q_DECLARE_METATYPE(CPlatformInfo)
