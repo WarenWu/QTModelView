@@ -16,6 +16,7 @@ public:
     virtual QString DisplayValue() const= 0;
     virtual void SetShowType(SHOW_TYPE type)=0;
     virtual SHOW_TYPE GetShowType()=0;
+    virtual ~IPlatInfo();
 protected:
     SHOW_TYPE m_showType = NO;
 };

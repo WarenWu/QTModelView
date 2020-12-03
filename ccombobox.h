@@ -6,7 +6,7 @@
 class CComboBox:public QComboBox
 {
 public:
-    CComboBox();
+    CComboBox(QWidget* parent = nullptr);
 public:
     CPlatformInfo m_platformInfo;
 };

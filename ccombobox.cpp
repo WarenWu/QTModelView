@@ -1,6 +1,6 @@
 #include "ccombobox.h"
 
-CComboBox::CComboBox()
+CComboBox::CComboBox(QWidget* parent):QComboBox(parent)
 {
 
 }

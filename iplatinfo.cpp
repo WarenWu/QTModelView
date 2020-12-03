@@ -4,3 +4,8 @@ IPlatInfo::IPlatInfo()
 {
 
 }
+
+IPlatInfo::~IPlatInfo()
+{
+
+}

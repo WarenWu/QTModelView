@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "cplatinfomodel.h"
+#include "cplatinfodelegate.h"
 
 #include <QMainWindow>
 
@@ -20,6 +21,7 @@ public:
 private:
     Ui::MainWindow *ui;
     CTableModel* m_tableModel;
+    CTableDelegate* m_tableDelegate;
 };
 
 #endif // MAINWINDOW_H

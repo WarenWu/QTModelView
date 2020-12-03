@@ -210,6 +210,7 @@ Makefile: Model.pro D:/installation/QT/5.12.9/mingw73_64/mkspecs/win32-g++/qmake
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/qt_config.prf \
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/win32-g++/qmake.conf \
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/exclusive_builds.prf \
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/toolchain.prf \
 		D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/default_pre.prf \
@@ -385,6 +386,7 @@ D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/qt_functions.prf:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/qt_config.prf:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/win32-g++/qmake.conf:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/exclusive_builds.prf:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/toolchain.prf:
 D:/installation/QT/5.12.9/mingw73_64/mkspecs/features/default_pre.prf:

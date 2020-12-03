@@ -47,20 +47,32 @@ OBJECTS_DIR   = release
 
 ####### Files
 
-SOURCES       = ctabledelegate.cpp \
-		ctablemodel.cpp \
+SOURCES       = ccombobox.cpp \
+		cplatforminfo.cpp \
+		cplatinfodelegate.cpp \
+		cplatinfomodel.cpp \
+		iplatinfo.cpp \
 		main.cpp \
 		mainwindow.cpp release\moc_mainwindow.cpp
-OBJECTS       = release/ctabledelegate.o \
-		release/ctablemodel.o \
+OBJECTS       = release/ccombobox.o \
+		release/cplatforminfo.o \
+		release/cplatinfodelegate.o \
+		release/cplatinfomodel.o \
+		release/iplatinfo.o \
 		release/main.o \
 		release/mainwindow.o \
 		release/moc_mainwindow.o
 
-DIST          =  ctabledelegate.h \
-		ctablemodel.h \
-		mainwindow.h ctabledelegate.cpp \
-		ctablemodel.cpp \
+DIST          =  ccombobox.h \
+		cplatforminfo.h \
+		cplatinfodelegate.h \
+		cplatinfomodel.h \
+		iplatinfo.h \
+		mainwindow.h ccombobox.cpp \
+		cplatforminfo.cpp \
+		cplatinfodelegate.cpp \
+		cplatinfomodel.cpp \
+		iplatinfo.cpp \
 		main.cpp \
 		mainwindow.cpp
 QMAKE_TARGET  = Model
@@ -82,10 +94,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) Model.zip $(SOURCES) $(DIST) Model.pro D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\spec_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\qdevice.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\device_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\sanitize.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\gcc-base.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\g++-base.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\angle.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\windows-vulkan.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\g++-win32.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\qconfig.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt_functions.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\win32-g++\qmake.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exclusive_builds.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\toolchain.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\default_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\default_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\resolve_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exclusive_builds_post.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\default_post.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\build_pass.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qml_debug.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\precompile_header.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\warn_on.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\resources.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\moc.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\opengl.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\uic.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qmake_use.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\file_copies.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\windows.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\testcase_targets.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exceptions.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\yacc.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\lex.prf Model.pro D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Widgets.prl D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Gui.prl D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Core.prl D:\installation\QT\5.12.9\mingw73_64\lib\qtmain.prl    D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\data\dummy.cpp ctabledelegate.h ctablemodel.h mainwindow.h  ctabledelegate.cpp ctablemodel.cpp main.cpp mainwindow.cpp mainwindow.ui    
+	$(ZIP) Model.zip $(SOURCES) $(DIST) Model.pro D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\spec_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\qdevice.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\device_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\sanitize.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\gcc-base.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\g++-base.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\angle.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\windows-vulkan.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\common\g++-win32.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\qconfig.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3danimation.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dcore.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dinput.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dlogic.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3drender.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_3drender_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_accessibility_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axbase.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axbase_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axcontainer.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axserver.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_axserver_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bluetooth.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_bootstrap_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_concurrent.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_core.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_core_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_dbus.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_dbus_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designer.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designer_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_edid_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_egl_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_fontdatabase_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gamepad.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gamepad_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gui.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_gui_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_help.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_help_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_location.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_location_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimedia.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_network.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_network_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_nfc.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_nfc_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_opengl.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_opengl_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_openglextensions.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_openglextensions_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_platformcompositor_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioning.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioning_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioningquick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_printsupport.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmldevtools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmltest.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quick.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quick_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_repparser.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_repparser_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_scxml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_scxml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sensors.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sensors_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialbus.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialport.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_serialport_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sql.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_sql_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_svg.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_svg_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_testlib.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_testlib_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_texttospeech.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_theme_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uiplugin.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uitools.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_uitools_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_vulkan_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_webchannel.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_websockets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_websockets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_widgets.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_widgets_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_winextras.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_winextras_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xml.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xml_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\modules\qt_lib_xmlpatterns_private.pri D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt_functions.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\win32-g++\qmake.conf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\spec_post.prf .qmake.stash D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exclusive_builds.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\toolchain.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\default_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\default_pre.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\resolve_config.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exclusive_builds_post.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\default_post.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\build_pass.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qml_debug.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\precompile_header.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\warn_on.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qt.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\resources.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\moc.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\opengl.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\uic.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\qmake_use.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\file_copies.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\win32\windows.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\testcase_targets.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\exceptions.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\yacc.prf D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\lex.prf Model.pro D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Widgets.prl D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Gui.prl D:\installation\QT\5.12.9\mingw73_64\lib\Qt5Core.prl D:\installation\QT\5.12.9\mingw73_64\lib\qtmain.prl    D:\installation\QT\5.12.9\mingw73_64\mkspecs\features\data\dummy.cpp ccombobox.h cplatforminfo.h cplatinfodelegate.h cplatinfomodel.h iplatinfo.h mainwindow.h  ccombobox.cpp cplatforminfo.cpp cplatinfodelegate.cpp cplatinfomodel.cpp iplatinfo.cpp main.cpp mainwindow.cpp mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\ctabledelegate.o release\ctablemodel.o release\main.o release\mainwindow.o release\moc_mainwindow.o
+	-$(DEL_FILE) release\ccombobox.o release\cplatforminfo.o release\cplatinfodelegate.o release\cplatinfomodel.o release\iplatinfo.o release\main.o release\mainwindow.o release\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -114,7 +126,7 @@ compiler_moc_header_make_all: release/moc_mainwindow.cpp
 compiler_moc_header_clean:
 	-$(DEL_FILE) release\moc_mainwindow.cpp
 release/moc_mainwindow.cpp: mainwindow.h \
-		ctablemodel.h \
+		cplatinfomodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QAbstractTableModel \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
@@ -180,12 +192,23 @@ release/moc_mainwindow.cpp: mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QVector \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QSharedPointer \
+		cplatinfodelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QStyledItemDelegate \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleditemdelegate.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtguiglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtgui-config.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleoption.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractspinbox.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qwidget.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs_win.h \
@@ -221,8 +244,18 @@ release/moc_mainwindow.cpp: mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfiledevice.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvector2d.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtouchdevice.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvalidator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregularexpression.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qicon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyle.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabbar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qrubberband.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qframe.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
 		release/moc_predefs.h \
 		D:/installation/QT/5.12.9/mingw73_64/bin/moc.exe
 	D:\installation\QT\5.12.9\mingw73_64\bin\moc.exe $(DEFINES) --include E:/C_Projects/QT/QTModelView/release/moc_predefs.h -ID:/installation/QT/5.12.9/mingw73_64/mkspecs/win32-g++ -IE:/C_Projects/QT/QTModelView -ID:/installation/QT/5.12.9/mingw73_64/include -ID:/installation/QT/5.12.9/mingw73_64/include/QtWidgets -ID:/installation/QT/5.12.9/mingw73_64/include/QtGui -ID:/installation/QT/5.12.9/mingw73_64/include/QtANGLE -ID:/installation/QT/5.12.9/mingw73_64/include/QtCore -ID:/installation/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++ -ID:/installation/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32 -ID:/installation/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/backward -ID:/installation/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include -ID:/installation/QT/Tools/mingw730_64/lib/gcc/x86_64-w64-mingw32/7.3.0/include-fixed -ID:/installation/QT/Tools/mingw730_64/x86_64-w64-mingw32/include mainwindow.h -o release\moc_mainwindow.cpp
@@ -250,14 +283,11 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
-release/ctabledelegate.o: ctabledelegate.cpp ctabledelegate.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ctabledelegate.o ctabledelegate.cpp
-
-release/ctablemodel.o: ctablemodel.cpp ctablemodel.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QAbstractTableModel \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
+release/ccombobox.o: ccombobox.cpp ccombobox.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QComboBox \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qcombobox.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtguiglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig.h \
@@ -269,60 +299,316 @@ release/ctablemodel.o: ctablemodel.cpp ctablemodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsysinfo.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlogging.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qflags.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbasicatomic.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_bootstrap.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qgenericatomic.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_cxx11.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_msvc.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtgui-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnamespace.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlist.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qalgorithms.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiterator.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs_win.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstring.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qchar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringliteral.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringalgorithms.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringview.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiterator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhashfunctions.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpair.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearraylist.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringlist.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregexp.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qscopedpointer.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmetatype.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvarlengtharray.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontainerfwd.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmargins.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpaintdevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrect.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsize.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpoint.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpalette.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qcolor.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qrgb.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qrgba64.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qbrush.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvector.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qmatrix.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpolygon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qregion.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdatastream.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiodevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qline.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtransform.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpainterpath.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qimage.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpixelformat.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpixmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qshareddata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhash.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfont.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfontmetrics.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfontinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qcursor.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qkeysequence.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qevent.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdebug.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtextstream.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlocale.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qset.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qurl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qurlquery.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfile.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfiledevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvector2d.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtouchdevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleoption.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvalidator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregularexpression.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qicon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyle.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabbar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qrubberband.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qframe.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ccombobox.o ccombobox.cpp
+
+release/cplatforminfo.o: cplatforminfo.cpp cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstring.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qchar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlogging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qflags.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnamespace.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringview.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiterator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpair.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearraylist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregexp.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringmatcher.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdebug.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhash.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtextstream.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiodevice.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs_impl.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcoreevent.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qscopedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmetatype.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvarlengtharray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontainerfwd.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject_impl.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlocale.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qshareddata.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvector.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpoint.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qset.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\ctablemodel.o ctablemodel.cpp
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cplatforminfo.o cplatforminfo.cpp
 
-release/main.o: main.cpp mainwindow.h \
-		ctablemodel.h \
+release/cplatinfodelegate.o: cplatinfodelegate.cpp cplatinfodelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QStyledItemDelegate \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleditemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtguiglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlogging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qflags.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtgui-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnamespace.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstring.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qchar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringview.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiterator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpair.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearraylist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregexp.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qscopedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmetatype.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvarlengtharray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontainerfwd.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleoption.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlocale.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdebug.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhash.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtextstream.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiodevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvector.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpoint.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qset.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qshareddata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractspinbox.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs_win.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmargins.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpaintdevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrect.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsize.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpalette.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qcolor.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qrgb.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qrgba64.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qbrush.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qmatrix.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpolygon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qregion.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdatastream.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qline.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtransform.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpainterpath.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qimage.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpixelformat.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qpixmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfont.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfontmetrics.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qfontinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qsizepolicy.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qcursor.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qkeysequence.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qevent.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qurl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qurlquery.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfile.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfiledevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvector2d.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtouchdevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvalidator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregularexpression.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qicon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyle.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabbar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qrubberband.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qframe.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		ccombobox.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QComboBox \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qcombobox.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cplatinfodelegate.o cplatinfodelegate.cpp
+
+release/cplatinfomodel.o: cplatinfomodel.cpp cplatinfomodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QAbstractTableModel \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
@@ -388,12 +674,134 @@ release/main.o: main.cpp mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QVector \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QSharedPointer
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\cplatinfomodel.o cplatinfomodel.cpp
+
+release/iplatinfo.o: iplatinfo.cpp iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstring.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qchar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlogging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qflags.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnamespace.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringview.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringbuilder.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\iplatinfo.o iplatinfo.cpp
+
+release/main.o: main.cpp mainwindow.h \
+		cplatinfomodel.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QAbstractTableModel \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobal.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig-bootstrapped.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qconfig.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtcore-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsystemdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qprocessordetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcompilerdetection.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtypeinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsysinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlogging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qflags.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qglobalstatic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmutex.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnumeric.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qversiontagging.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbasicatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_bootstrap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qgenericatomic.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_cxx11.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qatomic_msvc.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qrefcount.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qnamespace.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qarraydata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiterator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhashfunctions.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstring.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qchar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringliteral.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringalgorithms.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringview.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringbuilder.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpair.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qbytearraylist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringlist.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregexp.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qstringmatcher.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmetatype.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvarlengtharray.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontainerfwd.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobjectdefs_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qmap.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qdebug.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qhash.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qtextstream.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qiodevice.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcoreevent.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qscopedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qobject_impl.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qlocale.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qshareddata.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvector.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qpoint.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qset.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QVector \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QSharedPointer \
+		cplatinfodelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QStyledItemDelegate \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleditemdelegate.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtguiglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtgui-config.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleoption.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractspinbox.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qwidget.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs_win.h \
@@ -429,8 +837,18 @@ release/main.o: main.cpp mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfiledevice.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvector2d.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtouchdevice.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvalidator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregularexpression.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qicon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyle.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabbar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qrubberband.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qframe.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QApplication \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qapplication.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcoreapplication.h \
@@ -442,7 +860,7 @@ release/main.o: main.cpp mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp
 
 release/mainwindow.o: mainwindow.cpp mainwindow.h \
-		ctablemodel.h \
+		cplatinfomodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QAbstractTableModel \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qabstractitemmodel.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qvariant.h \
@@ -508,12 +926,23 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qcontiguouscache.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qsharedpointer_impl.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
+		cplatforminfo.h \
+		iplatinfo.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QString \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMap \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QMetaType \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QVector \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/QSharedPointer \
+		cplatinfodelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QStyledItemDelegate \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleditemdelegate.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgetsglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtguiglobal.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtgui-config.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtwidgets-config.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractitemdelegate.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyleoption.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractspinbox.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qwidget.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qwindowdefs_win.h \
@@ -549,8 +978,18 @@ release/mainwindow.o: mainwindow.cpp mainwindow.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qfiledevice.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvector2d.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qtouchdevice.h \
-		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qvalidator.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtCore/qregularexpression.h \
 		D:/installation/QT/5.12.9/mingw73_64/include/QtGui/qicon.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qabstractslider.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qstyle.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabbar.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qtabwidget.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qrubberband.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qframe.h \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/QMainWindow \
+		D:/installation/QT/5.12.9/mingw73_64/include/QtWidgets/qmainwindow.h \
 		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o mainwindow.cpp
 

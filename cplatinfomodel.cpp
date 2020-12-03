@@ -6,7 +6,7 @@ CTableModel::CTableModel()
     m_colCount = 0;
     m_rowCount = 0;
     insertCol(0,"车站ID");
-    insertCol(0,"车站Name");
+    insertCol(1,"车站Name");
     insertRow(0,"row1");
     insertRow(1,"row2");
     insertRow(2,"row3");
@@ -38,13 +38,17 @@ QVariant CTableModel::data(const QModelIndex &index, int role) const
     QString rowName = m_vecRowHeadName[row];
     if(role == Qt::DisplayRole)
     {
-        return m_mapCols[colName][rowName]->DisplayValue();
+        CPlatformInfo* info = static_cast<CPlatformInfo*>(m_mapCols[colName][rowName].data()) ;
+        QString ret = info->DisplayValue();
+        return ret;
     }
     else if(role == Qt::EditRole)
     {
-        //CPlatformInfo info = dynamic_cast<CPlatformInfo&>(*m_mapCols[colName][rowName]) ;
-        return QVariant::fromValue(dynamic_cast<CPlatformInfo&>(*m_mapCols[colName][rowName]));
-    }
+        CPlatformInfo info = *(static_cast<CPlatformInfo*>(m_mapCols[colName][rowName].data())) ;
+        //return QVariant::fromValue(CPlatformInfo());
+        return QVariant::fromValue(info);
+        //return "";
+    };
 
     return QVariant();
 }
@@ -75,7 +79,7 @@ Qt::ItemFlags CTableModel::flags(const QModelIndex &index) const
 //    {
 //        return Qt::NoItemFlags;
 //    }
-
+    Q_UNUSED(index);
     return Qt::ItemIsEditable|Qt::ItemIsSelectable|Qt::ItemIsEnabled;
 }
 
@@ -92,20 +96,23 @@ bool CTableModel::setData(const QModelIndex &index, const QVariant &value, int r
     QString rowName = m_vecRowHeadName[row];
     if(role == Qt::EditRole)
     {
-        QVariant data = index.data();
-
         CPlatformInfo platformInfo;
-        if (data.canConvert<CPlatformInfo>())
+        if (value.canConvert<CPlatformInfo>())
         {
-            platformInfo = data.value<CPlatformInfo>();
+            CPlatformInfo*  platformInfo = new CPlatformInfo(value.value<CPlatformInfo>());
+            m_mapCols[colName][rowName] =  QSharedPointer<IPlatInfo>(platformInfo);
         }
-        m_mapCols[colName][rowName] =  QSharedPointer<IPlatInfo>(&platformInfo);
+
     }
     return true;
 }
 
 bool CTableModel::setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role)
 {
+    Q_UNUSED(section);
+    Q_UNUSED(orientation);
+    Q_UNUSED(value);
+    Q_UNUSED(role);
     return true;
 }
 
