@@ -1,10 +1,12 @@
 #include "cplatinfomodel.h"
 
+
 CTableModel::CTableModel()
 {    
     m_colCount = 0;
     m_rowCount = 0;
-    insertCol(0,"车站");
+    insertCol(0,"车站ID");
+    insertCol(0,"车站Name");
     insertRow(0,"row1");
     insertRow(1,"row2");
     insertRow(2,"row3");
@@ -25,19 +27,23 @@ int CTableModel::columnCount(const QModelIndex &parent) const
 
 QVariant CTableModel::data(const QModelIndex &index, int role) const
 {
-    if(!index.isValid())
-        return QVariant();
+//    if(!index.isValid())
+//    {
+//        return QVariant();
+//    }
+
     int col = index.column();
     int row = index.row();
     QString colName = m_vecColHeadName[col];
     QString rowName = m_vecRowHeadName[row];
     if(role == Qt::DisplayRole)
     {
-        return m_mapCols[colName][rowName]->CurrentName();
+        return m_mapCols[colName][rowName]->DisplayValue();
     }
     else if(role == Qt::EditRole)
     {
-        return m_mapCols[colName][rowName]->CurrentName();
+        //CPlatformInfo info = dynamic_cast<CPlatformInfo&>(*m_mapCols[colName][rowName]) ;
+        return QVariant::fromValue(dynamic_cast<CPlatformInfo&>(*m_mapCols[colName][rowName]));
     }
 
     return QVariant();
@@ -63,20 +69,45 @@ QVariant CTableModel::headerData(int section, Qt::Orientation orientation, int r
     return QVariant();
 }
 
-//Qt::ItemFlags CTableModel::flags(const QModelIndex &index) const
-//{
+Qt::ItemFlags CTableModel::flags(const QModelIndex &index) const
+{
 //    if(!index.isValid())
+//    {
 //        return Qt::NoItemFlags;
-//    return Qt::ItemIsEditable|Qt::ItemIsSelectable|Qt::ItemIsEnabled;
-//}
+//    }
 
-//bool CTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
-//{
-////    if(!index.isValid())
-////        return false;
-//    return true;
+    return Qt::ItemIsEditable|Qt::ItemIsSelectable|Qt::ItemIsEnabled;
+}
 
-//}
+bool CTableModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    //    if(!index.isValid())
+    //    {
+    //        return false;
+    //    }
+
+    int col = index.column();
+    int row = index.row();
+    QString colName = m_vecColHeadName[col];
+    QString rowName = m_vecRowHeadName[row];
+    if(role == Qt::EditRole)
+    {
+        QVariant data = index.data();
+
+        CPlatformInfo platformInfo;
+        if (data.canConvert<CPlatformInfo>())
+        {
+            platformInfo = data.value<CPlatformInfo>();
+        }
+        m_mapCols[colName][rowName] =  QSharedPointer<IPlatInfo>(&platformInfo);
+    }
+    return true;
+}
+
+bool CTableModel::setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role)
+{
+    return true;
+}
 
 int CTableModel::insertRow(int index, QString rowName)
 {
@@ -139,6 +170,15 @@ void CTableModel::initColInfo()
         for(int j = 0; j < m_rowCount; ++ j)
         {
             IPlatInfo* pPlatformInfo = new CPlatformInfo();
+            if(i == 0)
+            {
+                pPlatformInfo->SetShowType(IPlatInfo::ID);
+            }
+            else
+            {
+                pPlatformInfo->SetShowType(IPlatInfo::NAME);
+            }
+
             vecColPlatformInfo.insert(m_vecRowHeadName[j],QSharedPointer<IPlatInfo>(pPlatformInfo));
         }
 

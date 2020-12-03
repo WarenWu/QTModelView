@@ -7,27 +7,71 @@ CPlatformInfo::CPlatformInfo()
 
 void CPlatformInfo::Init()
 {
-    updateInfo();
     m_currentID = -1;
+    m_currentName = "";
+    updateInfo();    
 }
 
-QString CPlatformInfo::CurrentName() const
+void CPlatformInfo::SetShowType(IPlatInfo::SHOW_TYPE type)
 {
-     return  "车站1";
+    m_showType = type;
 }
 
-QString CPlatformInfo::CurrentID() const
+IPlatInfo::SHOW_TYPE CPlatformInfo::GetShowType()
 {
-    if(m_currentID < 0)
+    return m_showType;
+}
+
+QString CPlatformInfo::DisplayValue() const
+{
+    if(m_showType == IPlatInfo::ID && m_currentID >= 0)
     {
-        return "";
+        return QString::number(m_currentID);
     }
-    return QString::number(m_currentID);
+    else if(m_showType == IPlatInfo::NAME)
+    {
+        return m_currentName;
+    }
+    return "";
 }
 
-//CPlatformInfo::~CPlatformInfo()
-//{
-//}
+bool CPlatformInfo::SetCurrentID(int id)
+{
+    if(s_mapInfo.find(id) == s_mapInfo.end())
+    {
+        return false;
+    }
+    m_currentID = id;
+    m_currentName = s_mapInfo[id];
+    return true;
+}
+
+int CPlatformInfo::GetCurrentID()
+{
+    return m_currentID;
+}
+
+bool CPlatformInfo::SetCurrentName(QString name)
+{
+    m_currentName = "";
+    for(auto it = s_mapInfo.begin(); it != s_mapInfo.end(); ++it)
+    {
+        if(it.value() == name)
+        {
+            m_currentName = name;
+            m_currentID = it.key();
+        }
+    }
+    if(m_currentName == "")
+        return false;
+    return true;
+}
+
+QString CPlatformInfo::GetCurrentName()
+{
+    return m_currentName;
+}
+
 
 QMap<int,QString> CPlatformInfo::s_mapInfo;
 

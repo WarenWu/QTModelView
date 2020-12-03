@@ -10,14 +10,22 @@ class CPlatformInfo:public IPlatInfo
 public:
     CPlatformInfo();
     void Init() override;
-    QString CurrentName() const override;
-    QString CurrentID() const override;
-    //virtual ~CPlatformInfo();
+    void SetShowType(SHOW_TYPE type) override;
+    SHOW_TYPE GetShowType()override;
+    QString DisplayValue() const override;
+
+    bool SetCurrentID(int id);
+    int GetCurrentID();
+    bool SetCurrentName(QString name);
+    QString GetCurrentName();
+
 private:
     static void updateInfo();
+
 private:
     int m_currentID;
     QString m_currentName;
+public:
     static QMap<int,QString> s_mapInfo;
 };
 Q_DECLARE_METATYPE(CPlatformInfo)
